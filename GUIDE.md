@@ -22,3 +22,23 @@ yellow = value
 can be several lines long without 
 any problem whatsoever. */
 
+# Element Display Roles
+
+CSS has two basic display roles: 
+- block formatting context (блочные элементы)
+- inline formatting context (строчные элементы)
+
+# Вариант 1: CSS внутри HTML
+
+<style> — это HTML-тег для CSS внутри HTML-файла
+
+# Вариант 2: отдельный CSS-файл
+
+<link rel="stylesheet" href="style.css"> — это HTML-строка, которая подключает внешний CSS-файл к HTML-странице.
+
+<link> = HTML-тег для подключения внешнего ресурса
+rel="stylesheet" = говорит, что подключаемый файл — это CSS-таблица стилей
+href="style.css" = путь к CSS-файлу
+
+
+
