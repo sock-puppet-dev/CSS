@@ -1,33 +1,92 @@
 <!DOCTYPE html>
-<html>
 
+<html lang="ru">
+<!-- современный HTML5-вариант должен идти lang="ru" -->
 <head>
 
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<!-- это устаревшие параметры
+http-equiv="content-type" = служебная meta-инструкция, которая сообщает тип содержимого документа
+content="text/html" = значение этой инструкции: документ является HTML-страницей
+charset=utf-8 = кодировка текста UTF-8, чтобы браузер правильно отображал разные языки и символы
+-->
+
+<meta charset="utf-8">
+<!-- современный HTML5-вариант
+Современный способ указать кодировку HTML-документа.
+UTF-8 позволяет правильно отображать русский, украинский, английский
+и другие языки, а также специальные символы.
+-->
+
+
 <title>A Simple Document</title>
 
 <style type="text/css" media="all">
-body {width: 42em;}
+    /* type="text/css" media="all" = устарело */
+    body {width: 42em;}
+</style>
 
+<style>
+    /* современный вариант */
+     body {width: 42em;}
 </style>
 
 <link rel="stylesheet" type="text/css" href="sheet1.css" media="all" />
+<!-- это устаревшие параметры: type="text/css", media="all"  -->
+
+<link rel="stylesheet" href="sheet1.css">
+<!-- современный HTML5-вариант -->
+
 
 <style type="text/css">
 @import url(c/sheet2.css);
-/* These are my styles! Yay! */
+/* устаревший параметр: type="text/css" */
 </style>
+
+<style>
+@import url("c/sheet2.css");
+/* современный вариант, но нежелательный, лучше через link */
+</style>
+
 
 </head>
 
 <body>
+
 <h1>Waffles!</h1>
+
 <p style="color: gray;">The most wonderful of all breakfast foods is
 the waffle—a ridged and cratered slab of home-cooked, fluffy goodness
 that makes every child's heart soar with joy. And they're so easy to make!
 Just a simple waffle-maker and some batter, and you're ready for a morning
 of aromatic ecstasy!
 </p>
+
+<!-- inline CSS: стиль написан прямо внутри HTML-элемента.
+     не устарело, но для современного чистого кода нежелательно.
+     лучше выносить стили в CSS-файл.
+-->
+
+<p class="intro">
+    The most wonderful of all breakfast foods is
+    the waffle—a ridged and cratered slab of home-cooked, fluffy goodness
+    that makes every child's heart soar with joy. And they're so easy to make!
+    Just a simple waffle-maker and some batter, and you're ready for a morning
+    of aromatic ecstasy!
+</p>
+
+<!-- выносить стили в CSS-файл -->
+<!-- пример такого CSS файла
+
+intro.css
+
+.intro {
+  color: gray;
+}
+
+ -->
+
+
 </body>
 
 </html>
