@@ -3,16 +3,27 @@
 
 <head>
 
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta charset="utf-8">
+
+<!-- современный HTML5-вариант
+     Современный способ указать кодировку HTML-документа.
+     UTF-8 позволяет правильно отображать русский, украинский, английский
+     и другие языки, а также специальные символы.
+-->
 
 <title>Block- and inline-level elements in an HTML document</title>
 
-<style type="text/css" media="all">
-
-body {width: 42em;}
-
+<style>
+    body {width: 10em;}
 </style>
-    
+
+<!-- type="text/css" media="all" = устарело, современный вариант уже написан
+     CSS-селектор, который выбирает элемент <body> и задаёт ширину <body> равной 10em.
+     em = относительная CSS-единица, которая зависит от размера шрифта.
+     1em = размер шрифта текущего элемента
+     em — это “умножить на текущий размер шрифта”.
+-->
+
 </head>
 
 <body>
@@ -20,7 +31,10 @@ body {width: 42em;}
 <h1>h1 (block)</h1>
 
 <p>
-This paragraph (p) element is a block-level element.  The strongly emphasized text <strong>is an inline element, and will line-wrap when necessary</strong>.  The content outside of inline elements is actually part of the block element.  The content inside inline elements <em>such as this one</em> belong to the inline element.
+This paragraph (p) element is a block-level element.
+The strongly emphasized text <strong>is an inline element, and will line-wrap when necessary</strong>.
+The content outside of inline elements is actually part of the block element.
+The content inside inline elements <em>such as this one</em> belong to the inline element.
 </p>
 
 </body>
